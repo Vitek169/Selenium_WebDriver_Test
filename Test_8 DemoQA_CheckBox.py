@@ -3,8 +3,15 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
-driver =webdriver.Chrome()
+options = Options()
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
 base_url = 'https://demoqa.com/checkbox'
 driver.get(base_url)
 driver.maximize_window()

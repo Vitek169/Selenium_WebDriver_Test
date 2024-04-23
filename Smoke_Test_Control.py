@@ -1,10 +1,15 @@
+import datetime
 import time
 
 from selenium import webdriver
-from selenium.webdriver import Keys
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
-driver = webdriver.Chrome()
+options = Options()
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
 base_url = 'https://www.saucedemo.com/'
 driver.get(base_url) #переходим по ссылке
 driver.maximize_window() #переводим в полноэкракнный режим
