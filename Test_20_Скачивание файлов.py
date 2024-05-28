@@ -9,7 +9,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
-path_downloads = '\\home\\vitek169\\it\\Selenium_WebDriver_Test\\fils_download\\'
+# path_downloads = '\\home\\vitek169\\it\\Selenium_WebDriver_Test\\fils_download\\'
 
 # options = Options()
 # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
@@ -52,10 +52,10 @@ path_downloads = '\\home\\vitek169\\it\\Selenium_WebDriver_Test\\fils_download\\
 #         print("File No")
 
 """Очистка дериктории"""
-files = glob.glob(os.path.join(path_downloads, "*.*"))
-for file in files:
-    os.remove(file)
-
+# files = glob.glob(os.path.join(path_downloads, "*.*"))
+# for file in files:
+#     os.remove(file)
+#
 
 
 

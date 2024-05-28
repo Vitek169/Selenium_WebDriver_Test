@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
 options = Options()
+options.page_load_strategy = 'eager'
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 
